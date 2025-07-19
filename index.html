@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2030 vision</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+     
+
+
+   
+        <h2>Hello, I am from Algeria..... and I have an appointment with history</h2>
+         <div style="display: flex; justify-content: center;">
+      <img src="images/f.png" alt="Spain" width="200px" height="200px"/>
+      </div>
+      
+
+
+      
+
+      <h2>What's on this site ? :</h2>
+      <p>
+        On this site that I designed, which is the first official site that I
+        designed, I will put here all my developments and plans
+      </p>
+      <h2>Choose the show music!!!</h2>
+      <h1>ESTA NOCHE</h1>
+      <div class="custom-audio-player">
+        
+  <audio src="audio/ESTA NOCHE (Slowed).mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>Starboy</h1>
+
+<div class="custom-audio-player">
+  <audio src="audio/The Weeknd - Starboy Lyrics ft Daft Punk.mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>Lana Del Rey - Young And Beautiful</h1>
+<div class="custom-audio-player">
+  <audio src="audio/Lana Del Rey - Young And Beautiful Lyrics.mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>Ordinary</h1>
+<div class="custom-audio-player">
+  <audio src="audio/Alex Warren - Ordinary Official Video.mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>DAVID Laid-OUTSIDE SLOWED</h1>
+<div class="custom-audio-player">
+  <audio src="audio/DAVID Laid-OUTSIDE SLOWED  REVERB.mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>NEFFEX</h1>
+<div class="custom-audio-player">
+  <audio src="audio/NEFFEX - Never Give Up  Copyright Free No27.mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>On My Own</h1>
+<div class="custom-audio-player">
+  <audio src="audio/On My Own _ Slowed   Reverb.mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>Kings  Queens</h1>
+<div class="custom-audio-player">
+  <audio src="audio/Kings  Queens - Ava Max Lyrics   Vietsub.mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+<h1>Habbat Riyahul Asifa</h1>
+<div class="custom-audio-player">
+  <audio src="audio/Habbat Riyahul Asifa -   .mp3"></audio>
+  <button class="play-pause-btn">▶️</button>
+  <input type="range" class="seek-slider" value="0" min="0" max="100">
+</div>
+
+
+
+
+
+
+
+<script>
+  const players = document.querySelectorAll('.custom-audio-player');
+
+  players.forEach(player => {
+    const audio = player.querySelector('audio');
+    const button = player.querySelector('.play-pause-btn');
+    const slider = player.querySelector('.seek-slider');
+
+    button.addEventListener('click', () => {
+      // إيقاف جميع المشغلات الأخرى
+      players.forEach(other => {
+        if (other !== player) {
+          const otherAudio = other.querySelector('audio');
+          const otherButton = other.querySelector('.play-pause-btn');
+          if (!otherAudio.paused) {
+            otherAudio.pause();
+            otherButton.textContent = '▶️';
+          }
+        }
+      });
+
+      // تشغيل أو إيقاف الحالي
+      if (audio.paused) {
+        audio.play();
+        button.textContent = '⏸️';
+      } else {
+        audio.pause();
+        button.textContent = '▶️';
+      }
+    });
+
+    // تحديث شريط التقدم
+    audio.addEventListener('timeupdate', () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      slider.value = percent;
+    });
+
+    // تغيير الوقت عند تحريك الشريط
+    slider.addEventListener('input', () => {
+      audio.currentTime = (slider.value / 100) * audio.duration;
+    });
+  });
+</script>
+
+
+
+
+      <!--About me-->
+      <h2>About me :</h2>
+         
+           
+        
+
+           <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="flex: 1;">
+              <div class="section">
+                <div class="info-container">
+
+                <div class="text">
+            <p>
+              <strong>FullName </strong>: <b><i>Wassim krim</i></b
+              ><br />
+              <br /><strong>born in :</strong> 2006/09/18 <br />
+              <br /><strong>Age</strong> : 18 old <br />
+              <br /><strong>GOAL(2025-2030) :</strong> Marriage to Spanish
+              <strong><em>Princess Leonor</em></strong
+              ><br />
+              <br /><strong>Big Goal</strong> = !!!!
+            </p>
+            </div>
+            <div class="image">
+            <img src="images/king 1.jpg" alt="King" />
+            </div>
+          </div>
+           </div>
+              </div>
+              </div>
+            
+          
+           
+         
+            
+    
+
+          
+            
+            
+            <time>
+      <h1>The countdown to achieving the goal :</h1>
+       <div class="countdown" id="countdown">
+    <div class="time-box">
+      <div id="days">00</div>
+      <div class="label">days</div>
+    </div>
+    <div class="time-box">
+      <div id="hours">00</div>
+      <div class="label">hours</div>
+    </div>
+    <div class="time-box">
+      <div id="minutes">00</div>
+      <div class="label">minutes</div>
+    </div>
+    <div class="time-box">
+      <div id="seconds">00</div>
+      <div class="label">seconds</div>
+    </div>
+  </div>
+<script>
+  const targetDate = new Date("January 01, 2030 00:00:00").getTime();
+
+const countdown = () => {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if (distance < 0) {
+    document.getElementById("countdown").innerHTML = "⏳ لقد وصلنا!";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerText = String(days).padStart(2, "0");
+  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+  document.getElementById("minutes").innerText = String(minutes).padStart(
+    2,
+    "0"
+  );
+  document.getElementById("seconds").innerText = String(seconds).padStart(
+    2,
+    "0"
+  );
+};
+
+countdown(); // تشغيل أول مرة
+setInterval(countdown, 1000); // ثم كل ثانية
+</script>
+            </time>
+      
+      <h1>I am Wassim Krim</h1>
+      
+      <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="flex: 1;">
+              <div calss="section">
+                <div class="info-container">
+
+              
+    <div class="text">
+          <ul>
+            <li>
+              <p>
+                They said my dream was impossible. They laughed at my ambition.
+                But now, I am writing my own story.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                This website is not just a page — it is the beginning of
+                something legendary.
+              </p>
+            </li>
+            <li><p>Believe me, I will break everything standing on my way and not asking how just see</p></li>
+          </ul>
+        </div>
+        <div class="image">
+          
+            <img src="images/téléchargement (1).jpg" alt="king" />
+            </div>
+      </div>
+      </div>
+
+      
+      <h2>Who is princess Leonor :</h2>
+      <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="flex: 1;">
+              <div class="section">
+                <div class="info-container">
+              <div class="text">
+
+             
+            <p>
+              Princess Leonor is the eldest daughter of
+              <em><strong>King Felipe VI</strong></em> of Spain and
+              <em><strong>Letizia, Queen of Spain</strong></em
+              >. Her full name is
+              <em
+                ><strong
+                  >Leonor de Todos los Santos de Borbón y Ortiz</strong
+                ></em
+              >. She was born on <strong><em>October 31, 2005</em></strong
+              >. She is now trying to prove that she can rule Spain as a queen,
+              so she is doing everything in her power to do so.
+            </p> 
+             </div>
+              <div class="image1"> <img
+              src="images/princess leonor.jpg"
+              alt="Leonor" /></div>
+            </div>
+            </div>
+           
+      
+           
+      </div>
+            </header>
+    <article>
+      <header>
+        <h1>Okay now I'm going to talk about my story :</h1>
+        <div class="text">
+     
+          <p>
+            As I said, my name is <strong><i>Wassim Krim</i></strong
+            >, a university student majoring in Computer Science, moving into my
+            second year. This year I will be the top of my class (I'm not
+            kidding this time). Anyway, I'm currently planning to go to study in
+            Algiers to develop my skills a bit, and also to have more
+            opportunities to achieve my goal. If I can't go to study in Algiers,
+            that's normal, but it will affect me a bit negatively. Anyway, I
+            have a goal that extends from <b>2025 to 2030</b>, which is to
+            <b>marry Princess Leonor of Spain</b>. To achieve that, I must work.
+            And when I say work, it's not just any work. This time, I mean a
+            princess, meaning I must work hard. Imagine the amount of work that
+            awaits me, but I haven't given up.
+          </p>
+          </div>
+     
+
+        <h2>Do you know why?</h2>
+        <div class="text">
+      <p>
+              Of course not. This is because I am a person who, if he sets his
+              mind to something, will achieve it, no matter what that goal is,
+              even if it is conquering the world. Okay, back to the goal.
+      </p>
+      </div>
+           
+        <h2>Why Leonor exactly?</h2>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div style="flex: 1;">
+              <div class="section">
+                <div class="info-container">
+
+            
+              <div class="text">
+          <p>   
+      Well that's a good question. Some say she's not pretty and a lot
+              of nonsense, but they can't see Mary and hear what I hear and feel
+              what I feel.Leonor, to me, is ,<b>like a piece of gold that fell
+              into the ocean and I found it</b>, so I don't want to lose her
+          </p>
+        </div>
+          <div class="image"><img src="images/leo.jpg" alt="leonor" />
+          </div>
+              </div>
+                </div>
+              </div>
+                  </div>
+              </div>
+         
+      </header>
+      <h2>why?</h2>
+      <div class="text">
+     
+        <p>
+          Leonor is the most suitable person for me in every way. When I thought
+          about her in my head, I said to myself, why was I wasting away like an
+          idiot? When I first saw her on the phone, when a rumor spread that she
+          liked a football player, and it was a false rumor, I felt something
+          strange towards her, an incomprehensible feeling, but it attracted me
+          more and more, and I was trying to understand that feeling until April
+          2025. On Saturday, I woke up happy, as if something had returned to
+          its path and that the path this time had become clear, not as usual.
+          Then I sat with myself for a while and asked myself what I want.
+          <b>Then the soul said: ????</b> Then
+          <b>
+            said: But you must have a partner with you, someone who has the same
+            way of thinking as you, the same desires as you, the same mentality
+            to achieve this goal</b>
+           <b>
+            The soul said: Spain is ruled by a king, right? And since he is a
+            king, there is an heir to the throne. If it is a boy, try to become
+            close to him and share your thoughts with him. And if it is a girl,
+            the same thing, but instead of getting close, marry her</b>
+          
+          So <b>I said in my head</b>, wait a moment. I know that there is a
+          Spanish princess named Leonor, and there I understood that feeling
+          that I felt the first time I saw her. There I knew that something
+          abnormal was happening. Then I was drawn to her. I liked the way she
+          spoke, her elegance, her steadfastness, her intelligence. I liked
+          every detail about her. Then I told my friends about this, as I hoped
+          that they would understand what I felt, but I met disappointing
+          answers (impossible, you cannot do it. She is a princess and you are a
+          normal person, and laughter in amazement at what I said, and much,
+          much more). At this moment I knew that something abnormal was
+          happening, as if fate was telling me to hurry. I am excited to see
+          that in the future, and I am in that The moment I realized who I am
+          and who I am. Many questions were answered at that moment. Then I
+          realized that I must complete the road alone, but I wanted to find a
+          competitor or a friend with me on the road. Then I went to the Reddit
+          application and published my goal, which is to marry the Spanish
+          Princess Leonor in five years. There were many positive comments and a
+          few stupid comments. The goal was to search for someone who has a
+          similar or greater goal, but unfortunately I did not find anyone. It
+          was as if something was telling me this is your path and your goal.
+          After that, I put a solid plan to develop myself over a period of
+          years, but the matter was not easy at all. But I was doing what I
+          could to reach my goal, and that if I wanted something, I was the one
+          who must reach it and take it. After that, I was thinking and thinking
+          and thinking and thinking until my head became a collection of endless
+          plans. But there was a dark side, which is the devil. He tried to keep
+          me away from the goal many times, but he could not. I entered into
+          many wars with him. One day he wins and one day I win, and I continued
+          the situation until I reached a series Great victories and there was
+          their king, the devil of anger, he was the first king I brought down
+          after that I brought down the king of lust and others who were trying
+          to delay me from my goal and after a few days I decided to go to
+          Algiers to develop myself and make some relationships maybe I will
+          find people who have the same thinking as me but unfortunately I did
+          not find people who have the same thinking as me but they are
+          interested in my goal and gave their attention remember that I do not
+          speak from a vacuum after that I started thinking in a crazy way then
+          I got up and said this world wants to delay me from my goal and the
+          filth wants me to reach it anyway I prepared a strong system learning
+          the Spanish language resistance exercises running daily and pushing my
+          limits and healthy eating and taking care of myself and the body I was
+          disciplined and working hard but as I said the world wants to delay me
+          so what happened happened and I did not follow the plan I made for a
+          whole week but I promised myself and fate and Leonor that the return
+          will be stronger but before that I saw a feeling that Leonor had
+          slipped from my hand but I was wrong it was a
+          <em>stupid devil who wanted Keep me away from the goal</em>, but I
+          swear that I will continue no matter what happens, even if the world
+          is against me, they say that this is impossible, I am with you, the
+          one who created the world and the one who created the impossible. And
+          in the end, I want to say something to my future self. Where have you
+          reached? I know that you are going through difficult times, but you
+          are close. Remember yourself when you were working hard in the
+          beginning. You should not stop now. Continue and tell the world that
+          you are here, and tell Leonor that you have come to take her, not as a
+          princess, but as a woman who understands what I want, my future self.
+          I think that when you read this, you will be going to give a speech to
+          the world. As for Leonor, now I want to say to everyone who reads
+          this, I will not disappoint you, and you will see what the world has
+          not seen. Just put your trust in me.
+        </p>
+        </div>
+      
+      <h1>Why do I think like this and not like most people?</h1>
+      <div class="text">
+      <ul>
+        <li><p>Why be normal when I can be greater</p></li>
+        <li>
+          <p>There are so many people who have done it so why can't I?</p>
+        </li>
+        <li><p>leave a mark in this world</p></li>
+        <li><p>This world is a flock and I will be the new shepherd</p></li>
+        <li>
+          <p>Nothing is impossible in this world and there are no limits</p>
+        </li>
+        <li><p>I will die, but I will not accept to die like a ram</p></li>
+      </ul>
+      <h2>Don't get upset when people tell you to stop imagining?</h2>
+      <div class="text">
+      <p>
+        Well, how do you convince a blind person that the moon is beautiful
+        today? Honestly, if I were the same person before this goal appeared, I
+        would have told myself that this is impossible, but in fact, I was
+        looking for something bigger, and now I am on my way to it. Since I am
+        dead, dead, I will die happy, and I have left an impact on this world.
+        After I set the goal, which is to marry Princess Leonor, I began to see
+        people as stupid. I look at them and say that they are wasting their
+        time in emptiness, and there I realized that I have been cured of
+        blindness, and people are still blind and do not see.
+      </p>
+      </div>
+      </div>
+    </article>
+  </body>
+  <h2>The dance danced on the wedding day with those who believe me :</h2>
+  <div style="display: flex;justify-content: center;">
+  
+    <video controls><source src="meme.mp4"></video>
+    </div>
+  <h1>Plan 2026/2025 :</h1>
+  <ul>
+    <div class="text">
+    <li>
+      <p>Learn the Spanish language until reaching the level BA</p>
+    </li>
+    <li>
+      <p>earning enough money to travel to Spain</p>
+    </li>
+    <li><p>Excellence in my field of study</p></li>
+    <li><p>Get a sports body</p></li>
+    <li><p>Learn many skills</p></li>
+    <li><p>Participate in tournaments and events</p></li>
+    <li><p>Breaking the world</p></li>
+  </ul>
+  </div>
+  <h1>I want to say if you have a goal or if you have a goal, you should do it and don't hear people now. People are a block of stupidity except some </h1>
+    <h1>This site will remain until the year 2030 and it will be a witness to my work and tired in the next five years.</h1>
+    <h2>Finally, I want to say, thank you for entering my site now, you are part of the story</h2>
+    <h2>Leonor, I am coming</h2>
+    <div style="display: flex;justify-content: center;">
+      <img src="images/kin.jpg" alt="Spain,king,Algeria,usa,world,princess" >
+    </div>
+    <p> My Email : krimw95@gmail.com</p>
+    <footer>Copyright &copy; 2025 by King of the world.</footer>
+    
+  </body>
+</html>
